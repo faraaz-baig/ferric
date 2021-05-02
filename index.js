@@ -79,11 +79,9 @@ client.on("message", (msg) => {
 
 command(client, "serverinfo", (msg) => {
   const { guild } = msg
-
   const { name, region, memberCount } = guild
   const icon = guild.iconURL()
-  const des =
-    "This is an officialy server of Team Groceri. Heres where all the team members work together on the groceri app."
+  const des = `This is an officialy server of Team ${name}. Heres where all the team members work together on the ${name} app.`
 
   const embed = new Discord.MessageEmbed()
     .setTitle(`Welcome to ${name}!`)
